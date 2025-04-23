@@ -190,13 +190,7 @@ span {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.our-team-icon {
-  fill: none;
-}
-.our-team-icon-container {
-  justify-content: space-around;
-  width: 264px;
-}
+
 .our-properties-title {
   font-weight: 500;
   font-size: 20px;
@@ -231,6 +225,7 @@ span {
 
 .image-descr {
   text-align: center;
+  margin-bottom: 8px;
 }
 
 .our-team-title,
@@ -242,6 +237,14 @@ span {
   margin-bottom: 72px;
 }
 
+.our-team-icon {
+  fill: none;
+}
+.our-team-icon-container {
+  justify-content: space-around;
+  width: 264px;
+  display: flex;
+}
 .our-team-images {
   display: flex;
   padding: 0;
@@ -323,9 +326,33 @@ footer {
 .page-footer {
   margin-bottom: 100px;
   margin-left: 156px;
-  margin-right: 1020px;
   text-align: start;
   display: flex;
   flex-direction: column;
   min-height: 5vh;
+  width: 264px;
+}
+.footer-icon {
+  fill: none;
+}
+.footer-icon-container {
+  width: 208px;
+  display: flex;
+  flex-direction: column;
+}
+.footer-icon-container p {
+  font-weight: 500;
+  font-size: 16px;
+  color: #fff;
+}
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 120px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.footer-icon-list {
+  display: flex;
 }
