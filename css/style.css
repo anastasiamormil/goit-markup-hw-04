@@ -43,9 +43,6 @@ p {
   letter-spacing: 0.03em;
   color: #2e2f42;
 }
-a {
-  transition-property: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
 /* Layout Structure */
 
@@ -110,7 +107,6 @@ a {
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-delay: 0;
 }
 .page-nav-first:hover {
   color: #404bbf;
@@ -139,7 +135,6 @@ a {
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-delay: 0;
 }
 .contacts a:hover,
 .contacts a:focus {
@@ -158,6 +153,9 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 188px 0;
+  background-position: center;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .main-page-title {
@@ -190,7 +188,6 @@ a {
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-delay: 0;
 }
 .button:hover {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
@@ -349,7 +346,9 @@ a {
 }
 .portfolio-image-box {
   width: calc((100% - 48px) / 3);
-  transition: box-shadow;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-image-box::before {
@@ -360,7 +359,6 @@ a {
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
   background: #fff;
-  transition-property: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-caption-box {
   border-bottom: 1px solid #e7e9fc;
@@ -371,24 +369,22 @@ a {
 
 .image-overlay {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 100%;
   transform: translateY(100%);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .image-box {
   overflow: hidden;
   position: relative;
-
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-delay: 0;
 }
 .image-box:hover .image-overlay {
   transform: translateY(0);
-  background: #4d5ae5;
+  background-color: #4d5ae5;
 }
 
 /* Footer */
@@ -426,15 +422,14 @@ a {
 
 .footer-icon {
   fill: none;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: var(--color1);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-icon:hover {
-  fill: #31d0aa;
+  --color1: #31d0aa;
 }
 .footer-icon-container {
-  width: 208px;
-  display: flex;
-  flex-direction: column;
 }
 .footer-icon-container p {
   font-weight: 500;
