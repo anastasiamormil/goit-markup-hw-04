@@ -289,7 +289,7 @@ p {
 }
 
 .our-team-icon {
-  fill: none;
+  fill: currentColor;
 }
 .our-team-icon-container {
   justify-content: space-around;
