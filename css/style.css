@@ -248,6 +248,8 @@ p {
   justify-content: center;
   position: relative;
   margin-bottom: 8px;
+  display: flex;
+  align-items: center;
 }
 .icon {
   position: absolute;
